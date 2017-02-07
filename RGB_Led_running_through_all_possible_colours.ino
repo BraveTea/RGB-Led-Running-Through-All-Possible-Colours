@@ -22,7 +22,7 @@ void loop()
         analogWrite(greenLead, green);
         analogWrite(blueLead, blue);
         delay(50);
-        /*int time = millis(); //debug/check feature to see delay times
+        /*unsigned long time = millis(); //debug/check feature to see delay times
         if (time > 900 && time < 950)
         {*/ //commented out
         Serial.print(red);
