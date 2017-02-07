@@ -1,6 +1,6 @@
-int redLead = 11;
-int greenLead = 10;
-int blueLead = 9;
+int redLead = 6;
+int greenLead = 9;
+int blueLead = 3;
 
 void setup()
 {
@@ -12,25 +12,28 @@ void setup()
 
 void loop()
 {
-  for (int red = 255; red >= 0; red--)
+  for (int red = 0; red <= 255 ; red++)
   {
     for (int green = 255; green >= 0; green--)
     {
-      for (int blue = 255; blue >= 0; blue--)
+      for (int blue = 0; blue <= 255; blue++)
       {
         analogWrite(redLead, red);
         analogWrite(greenLead, green);
         analogWrite(blueLead, blue);
-        
-        int time = millis(); //debug/check feature to see delay times
+        delay(50);
+        /*int time = millis(); //debug/check feature to see delay times
         if (time > 900 && time < 950)
-        {
+        {*/ //commented out
         Serial.print(red);
         Serial.print("\t");
         Serial.print(green);
         Serial.print("\t");
         Serial.println(blue);
-        }
+        Serial.print("millis is: ");
+        Serial.println(millis());
+        
+        
       }
     }
   }
