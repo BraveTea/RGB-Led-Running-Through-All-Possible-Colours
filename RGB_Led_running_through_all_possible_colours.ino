@@ -21,10 +21,11 @@ void loop()
         analogWrite(redLead, red);
         analogWrite(greenLead, green);
         analogWrite(blueLead, blue);
-        delay(50);
-        /*unsigned long time = millis(); //debug/check feature to see delay times
+
+        /*
+        unsigned long time = millis(); //debug/check feature to see delay times
         if (time > 900 && time < 950)
-        {*/ //commented out
+        {*/
         Serial.print(red);
         Serial.print("\t");
         Serial.print(green);
@@ -32,7 +33,7 @@ void loop()
         Serial.println(blue);
         Serial.print("millis is: ");
         Serial.println(millis());
-        
+       // }
         
       }
     }
