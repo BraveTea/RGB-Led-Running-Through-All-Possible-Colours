@@ -14,13 +14,17 @@ void loop()
 {
   for (int red = 0; red <= 255 ; red++)
   {
+    if (red == 255) red--;
     for (int green = 255; green >= 0; green--)
     {
+      if (green == 255) green++;
       for (int blue = 0; blue <= 255; blue++)
       {
+        if (blue == 255) blue--;
         analogWrite(redLead, red);
-        analogWrite(greenLead, green);
+        analogWrite(greenLead, green);        
         analogWrite(blueLead, blue);
+        
         delay(50);
         /*
         unsigned long time = millis(); //debug/check feature to see delay times
@@ -39,4 +43,4 @@ void loop()
     }
   }
 }
-\
+
